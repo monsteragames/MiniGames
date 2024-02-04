@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] public float portraitFOV = 60f; // Ajuste conforme necessário
-    [SerializeField] public float landscapeFOV = 60f; // Ajuste conforme necessário
+    [SerializeField] private float portraitFOV = 60f; // Ajuste conforme necessário
+    [SerializeField] private float landscapeFOV = 60f; // Ajuste conforme necessário
 
     private void Update()
     {
