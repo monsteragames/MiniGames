@@ -1,34 +1,37 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour
 {
+    [SerializeField] private float timeToRestart = 2f;
 
-    [SerializeField] private float TimeToRestart = 2f;
+    private CollectiblesManager collectiblesManager;
 
-    // Este método é chamado automaticamente quando algo entra no trigger
+    private void Start()
+    {
+        collectiblesManager = CollectiblesManager.Instance;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica se o objeto que entrou é o jogador (você pode ajustar a tag do jogador)
         if (other.CompareTag("Player"))
         {
-            // Chama uma função para lidar com a morte do jogador
             HandlePlayerDeath();
         }
     }
 
     private void HandlePlayerDeath()
     {
-        // Coloque aqui qualquer lógica que você queira executar quando o jogador morrer
         Debug.Log("O jogador morreu!");
 
-        // Reinicia o jogo após um breve atraso (você pode ajustar o tempo conforme necessário)
-        Invoke("RestartGame", TimeToRestart);
-    }
+        Camera.main.GetComponent<CameraController>().DisableCameraFollowing();
 
-    private void RestartGame()
-    {
-        // Reinicia a cena atual (certifique-se de ter uma cena única na build settings)
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // Resetar o CollectiblesManager
+        if (collectiblesManager != null)
+        {
+            collectiblesManager.Reset();
+        }
+
+        // Em vez de chamar Invoke, chame o método RestartGame diretamente do GameManager
+        GameManager.Instance.RestartGame(timeToRestart);
     }
 }

@@ -8,10 +8,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed;
 
     private Vector3 playerDirection = Vector3.zero;
-   private void OnEnable()
+
+    private void OnEnable()
     {
         swipeListener.OnSwipe.AddListener(OnSwipe);
-
     }
 
     private void OnSwipe(string swipe)
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
                 playerDirection = new Vector3(1f, 0, -1f).normalized;
                 break;
         }
-        Debug.Log(swipe + playerDirection);
+        //Debug.Log(swipe + playerDirection);
 
         RotatePlayer();
     }
@@ -66,5 +66,11 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         swipeListener.OnSwipe.RemoveListener(OnSwipe);
+    }
+
+    // Método para parar o movimento do jogador
+    public void StopMoving()
+    {
+        playerSpeed = 2f;
     }
 }

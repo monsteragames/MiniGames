@@ -1,66 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance; // Singleton instance
+    public static GameManager Instance { get; private set; } // Singleton para acesso global
 
-    public TextMeshProUGUI scoreText; // Reference to a TextMeshPro Text element to display the score
-    private int score = 0; // Player's score
-
-    public int totalCollectibles = 0; // Total number of collectibles in the scene
+    [SerializeField] private float timeToRestart = 2f;
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance != null && Instance != this)
         {
-            instance = this;
+            Destroy(this);
         }
         else
         {
-            Destroy(gameObject);
+            Instance = this;
         }
     }
 
-    void Start()
+    public void Victory()
     {
-        // Count the total number of collectibles in the scene
-        totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
+        // Execute qualquer lógica de vitória aqui (por exemplo, transição de cena, exibição de mensagem, etc.)
+        Debug.Log("Você completou a fase! Vitória!");
+        RestartGame(timeToRestart);
 
-        UpdateScoreUI();
-    }
-
-    public void IncreaseScore(int amount)
-    {
-        score += amount;
-        UpdateScoreUI();
-        Debug.Log("Score Increased! Current Score: " + score);
-    }
-
-    public void CollectItem()
-    {
-        totalCollectibles--;
-
-        if (totalCollectibles <= 0)
+        // Parar o jogador de andar
+        PlayerController playerController = FindObjectOfType<PlayerController>();
+        if (playerController != null)
         {
-            PlayerWins();
+            playerController.StopMoving();
         }
     }
 
-    void UpdateScoreUI()
+    // Método para reiniciar o jogo com um atraso especificado
+    public void RestartGame(float timeToRestart)
     {
-        scoreText.text = "Score: " + score;
+        StartCoroutine(RestartGameCoroutine(timeToRestart));
     }
 
-    void PlayerWins()
+    private IEnumerator RestartGameCoroutine(float timeToRestart)
     {
-        // Implement winning logic here (e.g., display a win message, load a new scene, etc.)
-        Debug.Log("Congratulations! You Win!");
+        yield return new WaitForSeconds(timeToRestart);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
-
-
-
