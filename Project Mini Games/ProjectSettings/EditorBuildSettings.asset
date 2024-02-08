@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GameplayTest.unity
+    guid: 0d5ec530879c67041973de41ab799509
+  - enabled: 1
+    path: Assets/Scenes/GameplayTest Sw Constante.unity
+    guid: 944b27ce50cc8664b9d70d661592b533
+  - enabled: 1
+    path: Assets/Scenes/GameplayTest Joystick.unity
+    guid: 12d25f94ff2cdbe439b3aba4475455cf
   m_configObjects: {}
