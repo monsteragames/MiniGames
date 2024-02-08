@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    [SerializeField] private float timeToRestart = 2f;
+    //[SerializeField] private float timeToRestart = 2f;
 
     private CollectiblesManager collectiblesManager;
 
@@ -21,7 +21,7 @@ public class DeathZone : MonoBehaviour
 
     private void HandlePlayerDeath()
     {
-        Debug.Log("O jogador morreu!");
+        //Debug.Log("O jogador morreu!");
 
         Camera.main.GetComponent<CameraController>().DisableCameraFollowing();
 
@@ -32,6 +32,6 @@ public class DeathZone : MonoBehaviour
         }
 
         // Em vez de chamar Invoke, chame o método RestartGame diretamente do GameManager
-        GameManager.Instance.RestartGame(timeToRestart);
+        GameManager.Instance.Defeat();
     }
 }

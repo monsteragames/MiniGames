@@ -2,52 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerMovement : MonoBehaviour
 {
-    public float forwardSpeed = 5f;
+    [SerializeField] private float initialForwardSpeed = 0f; // Velocidade inicial configurada no editor
     public float swipeTurnSpeed = 2f;
+
+    private float forwardSpeed;
+    private bool hasStarted = false; // Indica se o jogador já deu o primeiro toque
+
+    void Start()
+    {
+        forwardSpeed = initialForwardSpeed; // Inicializa a velocidade conforme configurada no editor
+    }
 
     void Update()
     {
-        // Constant forward movement
-        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+        // Se o jogador já começou e a velocidade for maior que zero, mover para frente
+        if (hasStarted && forwardSpeed > 0)
+        {
+            transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+        }
 
         // Swipe-based turning
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
-            // Check for swipe
+            Debug.Log(touch);
+            // Verifica se o jogador deu o primeiro toque
+            if (touch.phase == TouchPhase.Began)
+            {
+                hasStarted = true;
+                forwardSpeed = initialForwardSpeed; // Aplica a velocidade inicial
+            }
+
+            // Verifica se o jogador está arrastando
             if (touch.phase == TouchPhase.Moved)
             {
-                // Calculate swipe direction in world space
-                Vector3 swipeDirection = new Vector3(touch.deltaPosition.x, 0f, touch.deltaPosition.y).normalized;
-
-                // Rotate the player based on swipe direction
-                Vector3 newForward = Vector3.RotateTowards(transform.forward, swipeDirection, swipeTurnSpeed * Time.deltaTime, 0f);
-                transform.rotation = Quaternion.LookRotation(newForward);
+                RotatePlayer(touch.deltaPosition);
             }
         }
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        // Check if the player collides with the obstacle
-        if (other.CompareTag("Obstacle"))
-        {
-            // Stop forward movement
-            forwardSpeed = 0f;
-        }
+
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        // Resume forward movement when the player moves away from the obstacle
-        if (other.CompareTag("Obstacle"))
-        {
-            forwardSpeed = 5f; // Adjust the speed as needed
-        }
-    }
 
+    // Método para rotacionar o jogador com base no arrasto do toque
+    private void RotatePlayer(Vector2 swipeDelta)
+    {
+        // Calcula a direção do arrasto no espaço mundial
+        Vector3 swipeDirection = new Vector3(swipeDelta.x, 0f, swipeDelta.y).normalized;
+
+        // Rotaciona o jogador com base na direção do arrasto
+        Vector3 newForward = Vector3.RotateTowards(transform.forward, swipeDirection, swipeTurnSpeed * Time.deltaTime, 0f);
+        transform.rotation = Quaternion.LookRotation(newForward);
+    }
 }
-

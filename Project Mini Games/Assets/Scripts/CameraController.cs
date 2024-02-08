@@ -5,7 +5,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float portraitFOV = 60f; // Ajuste conforme necessário
     [SerializeField] private float landscapeFOV = 60f; // Ajuste conforme necessário
     [SerializeField] private Transform target; // Jogador (o objeto a ser seguido pela câmera)
-    [SerializeField] private Vector3 offset = new Vector3(0f, 5f, -10f); // Distância e altura da câmera em relação ao jogador
+    [SerializeField] private Vector3 offset = new Vector3(0f, 5f, -5f); // Distância e altura da câmera em relação ao jogador
     [SerializeField] private float minY = -1f; // Posição mínima do jogador antes de parar de seguir
     private bool canFollowPlayer = true; // Variável para controlar se a câmera deve seguir o jogador ou não
 
@@ -18,6 +18,7 @@ public class CameraController : MonoBehaviour
 
     private void AdjustCameraSettings()
     {
+        // Obtenha a resolução atual da tela
         float screenRatio = (float)Screen.width / Screen.height;
 
         // Verifique a orientação do dispositivo e ajuste o campo de visão da câmera
