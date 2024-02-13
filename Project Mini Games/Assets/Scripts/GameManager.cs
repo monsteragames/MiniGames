@@ -40,18 +40,9 @@ public class GameManager : MonoBehaviour
         // Execute qualquer lógica de vitória aqui (por exemplo, transição de cena, exibição de mensagem, etc.)
         Debug.Log("Você completou a fase! Avançando para o próximo nível...");
 
-        // Parar o jogador de andar
-        PlayerController playerController = FindObjectOfType<PlayerController>();
-        PlayerControllerSWCont playerControllerSWCont = FindObjectOfType<PlayerControllerSWCont>();
-        PlayerControllerJoystick playerControllerJoystick = FindObjectOfType<PlayerControllerJoystick>();  
-        if (playerController != null)
-        {
-            playerController.StopMoving();
-        }
-        if (playerControllerSWCont != null)
-        {
-            playerControllerSWCont.StopMoving();
-        }
+        //// Parar o jogador de andar
+        PlayerControllerJoystick playerControllerJoystick = FindObjectOfType<PlayerControllerJoystick>();
+
         if (playerControllerJoystick != null)
         {
             playerControllerJoystick.StopMoving();
