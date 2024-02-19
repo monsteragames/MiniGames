@@ -85,7 +85,8 @@ public class CameraController : MonoBehaviour
         mainCamera = Camera.main;
 
         // Define a orientação da tela para portrait
-        Screen.orientation = ScreenOrientation.Portrait;
+       // Screen.orientation = ScreenOrientation.Portrait;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
     private void Update()
