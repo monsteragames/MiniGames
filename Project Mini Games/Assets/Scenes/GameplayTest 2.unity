@@ -1991,7 +1991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff08408d2f850da47ad04607cec2e103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectiblesText: {fileID: 0}
+  collectiblesText: {fileID: 7416366001704452525}
   textVisibleDuration: 2
   fadeSpeed: 1
 --- !u!4 &1336529847
@@ -2744,6 +2744,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68b24b2590bba34980cb032fa343957, type: 3}
+--- !u!114 &7416366001704452525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6407664395096767159, guid: b68b24b2590bba34980cb032fa343957, type: 3}
+  m_PrefabInstance: {fileID: 7416366001704452524}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
