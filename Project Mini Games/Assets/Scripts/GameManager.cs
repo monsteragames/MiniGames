@@ -83,4 +83,9 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1); // Carrega a segunda cena, assumindo que a primeira cena é o menu inicial
+    }
 }
