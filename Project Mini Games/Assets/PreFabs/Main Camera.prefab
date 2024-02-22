@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  offset: {x: 0, y: 25, z: -15}
+  offset: {x: 0, y: 15, z: -15}
   minY: -1
 --- !u!114 &5083896556154942456
 MonoBehaviour:
@@ -121,6 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b44ebb9900a3743ba7a1c65283d6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReferenceResolution: {x: 1920, y: 1080}
+  ReferenceResolution: {x: 1080, y: 1920}
   Mode: 2
   MatchWidthOrHeight: 0.5
