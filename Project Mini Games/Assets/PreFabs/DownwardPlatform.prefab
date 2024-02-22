@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7488009245534400426}
   - component: {fileID: 2258632346470910405}
   - component: {fileID: 3514433245944494503}
+  - component: {fileID: 1351673497832124803}
   m_Layer: 0
   m_Name: DownwardPlatform
   m_TagString: Untagged
@@ -142,3 +143,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   downwardSpeed: 2
   maxDescent: 5
+  animator: {fileID: 1351673497832124803}
+--- !u!95 &1351673497832124803
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192564577424185188}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62608a5964717624eb03c4eb1550ed61, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
