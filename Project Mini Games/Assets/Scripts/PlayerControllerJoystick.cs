@@ -27,6 +27,8 @@ public class PlayerControllerJoystick : MonoBehaviour
     [SerializeField] private float rotationSpeed = 720f;
     [SerializeField] private FloatingJoystick joystick;
 
+    [SerializeField] private Animator animator; // Adiciona uma referência ao componente Animator
+
     private Vector3 moveDirection = Vector3.zero; // Direção de movimento atual
     private bool isMoving = false; // Flag para verificar se o jogador está se movendo
 
@@ -38,6 +40,7 @@ public class PlayerControllerJoystick : MonoBehaviour
             // Define a direção de movimento com base no joystick
             moveDirection = new Vector3(joystick.Horizontal, 0f, joystick.Vertical).normalized;
             isMoving = true; // Define a flag para true para indicar que o jogador está se movendo
+
         }
 
         // Verifica se o jogador está se movendo
@@ -46,6 +49,9 @@ public class PlayerControllerJoystick : MonoBehaviour
             // Move o jogador na direção definida com uma velocidade constante
             // transform.position += moveDirection * speed * Time.deltaTime;
             transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
+
+            // Atualiza o parâmetro "IsMoving" no animator para controlar a transição de animação
+            animator.SetBool("IsMoving", true);
 
             // Rotaciona o jogador na direção do movimento
             if (moveDirection != Vector3.zero)
@@ -59,7 +65,10 @@ public class PlayerControllerJoystick : MonoBehaviour
     // Método para parar o movimento do jogador
     public void StopMoving()
     {
-        speed = 2f;
+        speed = 0f;
+
+        // Atualiza o parâmetro "IsMoving" no animator para controlar a transição de animação
+        animator.SetBool("IsMoving", false);
     }
 }
 
