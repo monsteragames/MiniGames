@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 2699205464308579685}
   - component: {fileID: 3669047089037546601}
   - component: {fileID: 6861210641833605359}
+  - component: {fileID: 6840192444324775138}
   m_Layer: 0
   m_Name: Floor 10x10
   m_TagString: Untagged
@@ -239,3 +240,25 @@ MonoBehaviour:
   maxY: 10
   movementSpeed: 5
   stopTime: 2
+  animator: {fileID: 6840192444324775138}
+--- !u!95 &6840192444324775138
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351183321527726862}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2dba5a98d2df2ee4b9349ee5deed8354, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

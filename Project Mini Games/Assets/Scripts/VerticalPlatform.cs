@@ -79,6 +79,8 @@ public class VerticalPlatform : MonoBehaviour
     private bool isMovingUp = true; // Indica se a plataforma está se movendo para cima
     private bool isStopping = false; // Indica se a plataforma está parando
 
+    [SerializeField] private Animator animator; // Adiciona uma referência ao componente Animator
+
     private void Update()
     {
         // Verifica se a plataforma não está parando
@@ -92,6 +94,9 @@ public class VerticalPlatform : MonoBehaviour
             // Verifica se a plataforma atingiu um dos limites
             if (newY <= minY || newY >= maxY)
             {
+                // Atualiza o parâmetro no animator para controlar a transição de animação
+                animator.SetBool("Trigger", true);
+
                 // Inverte a direção do movimento
                 isMovingUp = !isMovingUp;
 
@@ -111,5 +116,8 @@ public class VerticalPlatform : MonoBehaviour
 
         // Define que a plataforma não está mais parando
         isStopping = false;
+
+        // Atualiza o parâmetro no animator para controlar a transição de animação
+        animator.SetBool("Trigger", false);
     }
 }

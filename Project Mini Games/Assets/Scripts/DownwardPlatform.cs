@@ -9,6 +9,8 @@ public class DownwardPlatform : MonoBehaviour
 
     private bool playerOnPlatform = true; // Indica se o jogador está na plataforma
 
+    [SerializeField] private Animator animator; // Adiciona uma referência ao componente Animator
+
     private void Update()
     {
         // Verifica se o jogador não está na plataforma e se a plataforma ainda não atingiu o limite inferior
@@ -29,6 +31,9 @@ public class DownwardPlatform : MonoBehaviour
         {
             // Define que o jogador está na plataforma
             playerOnPlatform = true;
+
+            // Atualiza o parâmetro no animator para controlar a transição de animação
+            animator.SetBool("Trigger", true);
         }
     }
 
@@ -39,6 +44,9 @@ public class DownwardPlatform : MonoBehaviour
         {
             // Define que o jogador não está mais na plataforma
             playerOnPlatform = false;
+
+            // Atualiza o parâmetro no animator para controlar a transição de animação
+            animator.SetBool("Trigger", false);
         }
     }
 }
