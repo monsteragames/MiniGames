@@ -9,18 +9,19 @@ public class DownwardPlatform : MonoBehaviour
 
     private bool playerOnPlatform = true; // Indica se o jogador está na plataforma
 
+    [SerializeField] private Transform platform;
     [SerializeField] private Animator animator; // Adiciona uma referência ao componente Animator
 
     private void Update()
     {
         // Verifica se o jogador não está na plataforma e se a plataforma ainda não atingiu o limite inferior
-        if (!playerOnPlatform && transform.position.y > -maxDescent)
+        if (!playerOnPlatform && platform.transform.position.y > -maxDescent)
         {
             // Calcula a nova posição da plataforma
-            float newY = Mathf.Max(transform.position.y - (downwardSpeed * Time.deltaTime), -maxDescent);
+            float newY = Mathf.Max(platform.transform.position.y - (downwardSpeed * Time.deltaTime), -maxDescent);
 
             // Move a plataforma para baixo
-            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+            platform.transform.position = new Vector3(platform.transform.position.x, newY, platform.transform.position.z);
         }
     }
 

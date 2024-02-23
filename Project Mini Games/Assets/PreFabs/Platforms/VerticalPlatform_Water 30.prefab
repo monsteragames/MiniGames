@@ -10,31 +10,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 861833765617153054, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 861833765617153054, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 861833765617153054, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192787225436783998, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61f9c9c0c1a564a4ca1d1233c22e6291, type: 2}
     - target: {fileID: 1340733723732588572, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_Name
-      value: VerticalPlatform 20
+      value: VerticalPlatform_Water 30
       objectReference: {fileID: 0}
     - target: {fileID: 1351183321527726862, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_Name
-      value: Floor 20x20
+      value: Floor 30x30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699205464308579685, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61f9c9c0c1a564a4ca1d1233c22e6291, type: 2}
+    - target: {fileID: 3598162316298910735, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
+      propertyPath: maxY
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4260726368129199045, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4260726368129199045, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6861210641833605359, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: maxY
-      value: 20
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861210641833605359, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
+      propertyPath: minY
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6861210641833605359, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: animator

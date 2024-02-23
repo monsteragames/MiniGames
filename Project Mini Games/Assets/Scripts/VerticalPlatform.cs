@@ -79,6 +79,7 @@ public class VerticalPlatform : MonoBehaviour
     private bool isMovingUp = true; // Indica se a plataforma está se movendo para cima
     private bool isStopping = false; // Indica se a plataforma está parando
 
+    [SerializeField] private Transform platform;
     [SerializeField] private Animator animator; // Adiciona uma referência ao componente Animator
 
     private void Update()
@@ -87,9 +88,9 @@ public class VerticalPlatform : MonoBehaviour
         if (!isStopping)
         {
             // Move a plataforma verticalmente
-            float newY = transform.position.y + (isMovingUp ? movementSpeed : -movementSpeed) * Time.deltaTime;
+            float newY = platform.transform.position.y + (isMovingUp ? movementSpeed : -movementSpeed) * Time.deltaTime;
             newY = Mathf.Clamp(newY, minY, maxY);
-            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+            platform.transform.position = new Vector3(platform.transform.position.x, newY, platform.transform.position.z);
 
             // Verifica se a plataforma atingiu um dos limites
             if (newY <= minY || newY >= maxY)
