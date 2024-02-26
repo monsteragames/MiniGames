@@ -2,26 +2,14 @@ using UnityEngine;
 
 public class CollectibleController : MonoBehaviour
 {
-    private CollectiblesManager collectiblesManager;
-
-    private void Start()
-    {
-        collectiblesManager = CollectiblesManager.Instance;
-        if (collectiblesManager == null)
-        {
-            Debug.LogWarning("CollectiblesManager não foi inicializado corretamente!");
-        }
-    }
+    public int collectibleIndex; // Índice do colecionável
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Collectible"))
+        if (other.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
-            if (collectiblesManager != null)
-            {
-                collectiblesManager.ItemCollected();
-            }
+            CollectiblesManager.Instance.CollectCollectible(collectibleIndex);
+            gameObject.SetActive(false); // Desativa o objeto colecionável ao ser coletado
         }
     }
 }
