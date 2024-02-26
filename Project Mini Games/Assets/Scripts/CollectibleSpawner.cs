@@ -6,7 +6,7 @@ public class CollectibleSpawner : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
 
     private CollectiblesManager collectibleManager; // Referência ao CollectibleManager
-//  private static int lastAssignedIndex = -1; // Índice atribuído mais recentemente
+    //private static int lastAssignedIndex = -1; // Índice atribuído mais recentemente
 
     private void Start()
     {
@@ -17,8 +17,8 @@ public class CollectibleSpawner : MonoBehaviour
         }
         else
         {
-            int totalCollectibles = spawnPoints.Length;
-            collectibleManager.CreateCollectibleUIItems(totalCollectibles); // Cria os elementos da UI para os colecionáveis
+            //int totalCollectibles = spawnPoints.Length;
+            //collectibleManager.CreateCollectibleUIItems(totalCollectibles); // Cria os elementos da UI para os colecionáveis
             SpawnCollectibles();
         }
     }

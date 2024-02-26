@@ -10,7 +10,16 @@ public class CollectibleUIItem : MonoBehaviour
     private void Start()
     {
         image = GetComponent<Image>();
-        image.enabled = false; // Inicialmente desativa a imagem na UI
+
+        if (gameObject.CompareTag("CollectibleShadowUI"))
+        {
+            image.enabled = true; // Inicialmente desativa a imagem na UI Shadow
+        }
+        else
+        {
+            image.enabled = false; // Inicialmente desativa a imagem na UI
+        }
+       
     }
 
     public void ActivateCollectibleUI()

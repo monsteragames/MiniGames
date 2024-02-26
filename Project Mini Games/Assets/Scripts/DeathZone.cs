@@ -28,7 +28,7 @@ public class DeathZone : MonoBehaviour
         // Resetar o CollectiblesManager
         if (collectiblesManager != null)
         {
-            //collectiblesManager.Reset();
+            collectiblesManager.Reset();
         }
 
         // Em vez de chamar Invoke, chame o método RestartGame diretamente do GameManager
