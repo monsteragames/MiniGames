@@ -5,8 +5,6 @@ public class CollectiblesManager : MonoBehaviour
 {
     public static CollectiblesManager Instance { get; private set; }
 
-    [SerializeField] private CollectibleUIItem[] collectibleUIItems;
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -21,9 +19,17 @@ public class CollectiblesManager : MonoBehaviour
 
     public void CollectCollectible(int collectibleIndex)
     {
-        if (collectibleIndex >= 0 && collectibleIndex < collectibleUIItems.Length)
+        // Encontra todos os colecionáveis UI na cena
+        CollectibleUIItem[] collectibleUIItems = FindObjectsOfType<CollectibleUIItem>();
+
+        // Ativa o colecionável UI correspondente ao índice coletado
+        foreach (CollectibleUIItem uiItem in collectibleUIItems)
         {
-            collectibleUIItems[collectibleIndex].ActivateCollectibleUI();
+            if (uiItem.collectibleIndex == collectibleIndex)
+            {
+                uiItem.ActivateCollectibleUI();
+                break;
+            }
         }
     }
 }

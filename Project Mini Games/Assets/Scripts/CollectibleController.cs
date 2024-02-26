@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class CollectibleController : MonoBehaviour
 {
-    public int collectibleIndex; // Índice do colecionável
+    // Índice do colecionável
+    public int collectibleIndex;
 
     private void OnTriggerEnter(Collider other)
     {

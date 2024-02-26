@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 808513253013755456}
   - component: {fileID: 626861362599917628}
   - component: {fileID: 4722947657324265273}
+  - component: {fileID: 643486995697716471}
   m_Layer: 0
   m_Name: Petal Collectable
   m_TagString: Collectible
@@ -105,3 +106,16 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &643486995697716471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641654678957772898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19174193fe14291498eafd91bb6d3bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibleIndex: 0
