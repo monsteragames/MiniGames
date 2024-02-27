@@ -15,7 +15,7 @@ public class CollectiblesManager : MonoBehaviour
     private CollectibleUIItem[] collectibleUIShadows; // Array para armazenar as sombras da UI do colecionável
     private float horizontalSpacing = 200f; // Espaçamento horizontal entre as imagens da UI
 
-   private int totalCollectibles; // Número total de colecionáveis na cena
+    private int totalCollectibles = 0; // Número total de colecionáveis na cena
     private int collectedCount = 0; // Contador de colecionáveis coletados
 
     private void Awake()
@@ -29,18 +29,6 @@ public class CollectiblesManager : MonoBehaviour
             Instance = this;
         }
     }
-
-    private void Start()
-    {
-        // Cria os itens de UI com base no número total de colecionáveis na cena
-        totalCollectibles = FindObjectsOfType<CollectibleController>().Length;
-       
-        CreateCollectibleUIItems(totalCollectibles);
-
-        // Cria as sombras da UI com base no número total de colecionáveis na cena
-        CreateCollectibleUIShadows(totalCollectibles);
-    }
-
 
     public void CollectCollectible(int collectibleIndex)
     {
@@ -56,7 +44,7 @@ public class CollectiblesManager : MonoBehaviour
         Transform collectibleUIShadow = collectibleUIShadowParent.GetChild(collectibleIndex);
         CollectibleUIItem uiItemShadow = collectibleUIShadow.GetComponent<CollectibleUIItem>();
 
-        // Atualiza o contador de colecionáveis coletados
+        //// Atualiza o contador de colecionáveis coletados
         collectedCount++;
 
         CheckVictory();
@@ -97,7 +85,7 @@ public class CollectiblesManager : MonoBehaviour
     }
 
     // Método para criar as sombras da UI para os colecionáveis
-    private void CreateCollectibleUIShadows(int totalColl)
+    public void CreateCollectibleUIShadows(int totalColl)
     {
         // Inicializar o array de itens de UI com o tamanho do número de colecionáveis
         collectibleUIShadows = new CollectibleUIItem[totalColl];
@@ -130,6 +118,11 @@ public class CollectiblesManager : MonoBehaviour
         }
     }
 
+    public void TotalCollectible(int totalColl)
+    {
+        totalCollectibles = totalColl; //recebe valor do numero de spawnpoints do CollictibleSpwaner
+    }
+
     public void Reset()
     {
         // Itera sobre todos os itens de UI dos colecionáveis
@@ -149,7 +142,7 @@ public class CollectiblesManager : MonoBehaviour
 
     private void CheckVictory()
     {
-        // Verifica se todos os colecionáveis foram coletados
+         // Verifica se todos os colecionáveis foram coletados
         if (collectedCount == totalCollectibles)
         {
             GameManager.Instance.Victory();

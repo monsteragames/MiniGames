@@ -15,7 +15,7 @@ public class CollectibleUIItem : MonoBehaviour
         {
             image.enabled = true; // Inicialmente desativa a imagem na UI Shadow
         }
-        else
+        else if (gameObject.CompareTag("CollectibleUI"))
         {
             image.enabled = false; // Inicialmente desativa a imagem na UI
         }

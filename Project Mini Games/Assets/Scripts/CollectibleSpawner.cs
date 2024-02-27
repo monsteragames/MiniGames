@@ -17,8 +17,10 @@ public class CollectibleSpawner : MonoBehaviour
         }
         else
         {
-            //int totalCollectibles = spawnPoints.Length;
-            //collectibleManager.CreateCollectibleUIItems(totalCollectibles); // Cria os elementos da UI para os colecionáveis
+            int totalCollectibles = spawnPoints.Length;
+            collectibleManager.CreateCollectibleUIItems(totalCollectibles); // Cria os elementos da UI para os colecionáveis
+            collectibleManager.CreateCollectibleUIShadows(totalCollectibles); // Cria os elementos da UI shadow para os colecionáveis
+            collectibleManager.TotalCollectible(totalCollectibles); //Envia a quantidade de coleveis para o manager
             SpawnCollectibles();
         }
     }
