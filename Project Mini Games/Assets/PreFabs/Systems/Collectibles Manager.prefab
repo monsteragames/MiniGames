@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3162727163850970290}
   - component: {fileID: 4355252162564998831}
-  - component: {fileID: 8042639921512960612}
   m_Layer: 0
   m_Name: Collectibles Manager
   m_TagString: Untagged
@@ -49,16 +48,3 @@ MonoBehaviour:
   collectibleUIParent: {fileID: 0}
   collectibleUIShadowPrefab: {fileID: 5346218912517977597, guid: 6d56966e133c1bb47b4879684cffdd30, type: 3}
   collectibleUIShadowParent: {fileID: 0}
---- !u!114 &8042639921512960612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4573463524976194470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26fc49cfb27fa6f49ba19f4027e67fe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
