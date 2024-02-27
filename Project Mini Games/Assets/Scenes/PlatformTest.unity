@@ -649,7 +649,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToRestart: 2
   timeToNextLevel: 2
-  playerAnimator: {fileID: 1281902926}
 --- !u!4 &378479423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7035492391131916687, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
@@ -2217,6 +2216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectibles Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8042639921512960612, guid: 49b179157301216479ab274629c2e301, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1281902926}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timeToRestart = 2f;
     [SerializeField] private float timeToNextLevel = 2f;
 
-    [SerializeField] private Animator playerAnimator; // Adiciona uma referência ao componente Animator do jogador
-
     private int currentLevelIndex; // Índice do nível atual
 
     private void Awake()
@@ -35,7 +33,8 @@ public class GameManager : MonoBehaviour
         // Execute qualquer lógica de morte aqui (por exemplo, exibição de mensagem, etc.)
         Debug.Log("Você morreu! Reiniciando o nível...");
 
-        playerAnimator.SetTrigger("Defeat"); // Ativa a animação de morte do jogador
+        //playerAnimator.SetTrigger("Defeat"); // Ativa a animação de morte do jogador
+        PlayerControllerAnimation.Instance.PlayerAnimationDefeat();
 
         RestartLevel(timeToRestart);
     }
@@ -45,7 +44,8 @@ public class GameManager : MonoBehaviour
         // Execute qualquer lógica de vitória aqui (por exemplo, transição de cena, exibição de mensagem, etc.)
         Debug.Log("Você completou a fase! Avançando para o próximo nível...");
 
-        playerAnimator.SetTrigger("Victory"); // Ativa a animação de vitória do jogador
+        //playerAnimator.SetTrigger("Victory"); // Ativa a animação de vitória do jogador
+        PlayerControllerAnimation.Instance.PlayerAnimationVictory();
 
         //// Parar o jogador de andar
         PlayerControllerJoystick playerControllerJoystick = FindObjectOfType<PlayerControllerJoystick>();

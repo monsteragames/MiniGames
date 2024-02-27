@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectibles Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8042639921512960612, guid: 49b179157301216479ab274629c2e301, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1053261041}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -752,7 +756,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToRestart: 2
   timeToNextLevel: 2
-  playerAnimator: {fileID: 1053261041}
 --- !u!1 &407556759
 GameObject:
   m_ObjectHideFlags: 0
