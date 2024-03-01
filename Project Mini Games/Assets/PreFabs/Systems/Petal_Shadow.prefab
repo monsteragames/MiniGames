@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 355498031413368089, guid: d65a14a753995924db8fb348631cf885, type: 3}
       propertyPath: m_Color.a
-      value: 0.5882353
+      value: 0.7882353
       objectReference: {fileID: 0}
     - target: {fileID: 355498031413368089, guid: d65a14a753995924db8fb348631cf885, type: 3}
       propertyPath: m_Color.b
@@ -86,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1379032725808937669, guid: d65a14a753995924db8fb348631cf885, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -400
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1379032725808937669, guid: d65a14a753995924db8fb348631cf885, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 750
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1379032725808937669, guid: d65a14a753995924db8fb348631cf885, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

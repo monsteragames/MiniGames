@@ -18,6 +18,8 @@ public class CollectiblesManager : MonoBehaviour
     private int totalCollectibles = 0; // Número total de colecionáveis na cena
     private int collectedCount = 0; // Contador de colecionáveis coletados
 
+    private bool[] collectedStatus; // Array para armazenar o status de coleta de cada colecionável
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -30,24 +32,41 @@ public class CollectiblesManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+
+    }
+
     public void CollectCollectible(int collectibleIndex)
     {
-        // Ativa o colecionável UI correspondente ao índice coletado
-        Transform collectibleUI = collectibleUIParent.GetChild(collectibleIndex);
-        CollectibleUIItem uiItem = collectibleUI.GetComponent<CollectibleUIItem>();
-        if (uiItem != null)
-        {
-            uiItem.ActivateCollectibleUI();
-        }
+        // Atualiza o status de coleta do colecionável
+        collectedStatus[collectibleIndex] = true;
 
-        // Ativa o colecionável UI correspondente ao índice coletado
-        Transform collectibleUIShadow = collectibleUIShadowParent.GetChild(collectibleIndex);
-        CollectibleUIItem uiItemShadow = collectibleUIShadow.GetComponent<CollectibleUIItem>();
-
-        //// Atualiza o contador de colecionáveis coletados
+        // Atualiza o contador de colecionáveis coletados
         collectedCount++;
 
+        // Atualiza a UI
+        UpdateCollectibleUI();
+
         CheckVictory();
+    }
+
+    private void UpdateCollectibleUI()
+    {
+        // Ativa as sombras da UI de todos os colecionáveis
+        foreach (CollectibleUIItem shadowItem in collectibleUIShadows)
+        {
+            shadowItem.ActivateUI();
+        }
+
+        // Ativa as imagens dos colecionáveis coletados
+        for (int i = 0; i < collectibleUIItems.Length; i++)
+        {
+            if (collectedStatus[i])
+            {
+                collectibleUIItems[i].ActivateUI();
+            }
+        }
     }
 
     // Método para criar os itens de UI para os colecionáveis
@@ -55,6 +74,7 @@ public class CollectiblesManager : MonoBehaviour
     {
         // Inicializar o array de itens de UI com o tamanho do número de colecionáveis
         collectibleUIItems = new CollectibleUIItem[totalColl];
+        collectedStatus = new bool[totalColl];
 
         // Iterar sobre o número total de colecionáveis para criar e configurar cada item de UI
         for (int i = 0; i < totalColl; i++)
@@ -80,6 +100,7 @@ public class CollectiblesManager : MonoBehaviour
 
                 // Adicionar o item de UI ao array de itens de UI
                 collectibleUIItems[i] = collectibleUIItem;
+                collectedStatus[i] = false; // Inicialmente nenhum colecionável foi coletado
             }
         }
     }
@@ -135,14 +156,14 @@ public class CollectiblesManager : MonoBehaviour
         // Itera sobre todas as sombras da UI dos colecionáveis
         foreach (CollectibleUIItem shadowItem in collectibleUIShadows)
         {
-            // Ativa a imagem da sombra do item de UI
-            shadowItem.gameObject.SetActive(true);
+            // Desativa a imagem da sombra do item de UI
+            shadowItem.gameObject.SetActive(false);
         }
     }
 
     private void CheckVictory()
     {
-         // Verifica se todos os colecionáveis foram coletados
+        // Verifica se todos os colecionáveis foram coletados
         if (collectedCount == totalCollectibles)
         {
             GameManager.Instance.Victory();
