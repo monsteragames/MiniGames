@@ -13,7 +13,7 @@ public class CollectiblesManager : MonoBehaviour
 
     private CollectibleUIItem[] collectibleUIItems; // Array para armazenar os itens de UI do colecionável
     private CollectibleUIItem[] collectibleUIShadows; // Array para armazenar as sombras da UI do colecionável
-    private float horizontalSpacing = 200f; // Espaçamento horizontal entre as imagens da UI
+    private float horizontalSpacing = 100f; // Espaçamento horizontal entre as imagens da UI
 
     private int totalCollectibles = 0; // Número total de colecionáveis na cena
     private int collectedCount = 0; // Contador de colecionáveis coletados
