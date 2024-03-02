@@ -23,7 +23,8 @@ public class DeathZone : MonoBehaviour
     {
         //Debug.Log("O jogador morreu!");
 
-        Camera.main.GetComponent<CameraController>().DisableCameraFollowing();
+       
+       // GetComponent<CameraController>().DisableCameraFollowing();
 
         // Resetar o CollectiblesManager
         if (collectiblesManager != null)
