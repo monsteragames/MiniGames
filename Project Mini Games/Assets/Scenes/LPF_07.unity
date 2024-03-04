@@ -530,6 +530,8 @@ MonoBehaviour:
   - {fileID: 531356932}
   - {fileID: 797393344}
   - {fileID: 963546782}
+  - {fileID: 1760735230}
+  - {fileID: 195508480}
 --- !u!4 &270220647
 Transform:
   m_ObjectHideFlags: 0

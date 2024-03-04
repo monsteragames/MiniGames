@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 861833765617153054, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 861833765617153054, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1340733723732588572, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_Name
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1351183321527726862, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: m_Name
-      value: Floor 20x20
+      value: Floor 22x22
       objectReference: {fileID: 0}
     - target: {fileID: 3598162316298910735, guid: fe2473c7caa679d42a95fe3caa80e3c6, type: 3}
       propertyPath: maxY
