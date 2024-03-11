@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3866487131558762771}
   - component: {fileID: 3740717659594125596}
   - component: {fileID: 4276272618558128932}
+  - component: {fileID: 307619706295360012}
   m_Layer: 0
   m_Name: Personagem
   m_TagString: Player
@@ -109,7 +110,6 @@ MonoBehaviour:
   speed: 15
   rotationSpeed: 720
   joystick: {fileID: 0}
-  animator: {fileID: 4276272618558128932}
 --- !u!95 &4276272618558128932
 Animator:
   serializedVersion: 5
@@ -131,6 +131,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &307619706295360012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2384331804982081802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8b0b527122e1544a74dcd52656b8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayerMask:
+    serializedVersion: 2
+    m_Bits: 1152
+  Target: {fileID: 0}
+  Camera: {fileID: 0}
+  FadedAlpha: 0.2
+  RetainShadows: 1
+  TargetPositionOffset: {x: 0, y: 0.5, z: 0}
+  FadeSpeed: 3
+  ObjectsBlockingView: []
 --- !u!1 &2417892221777832651
 GameObject:
   m_ObjectHideFlags: 0
