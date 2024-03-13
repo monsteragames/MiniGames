@@ -9,45 +9,63 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: faa182c148953db4588af61d01a315fc
   - enabled: 1
-    path: Assets/Scenes/Camera 1.unity
-    guid: 1760d0beaba9e7e4eaf97220b71e4bc7
-  - enabled: 1
-    path: Assets/Scenes/Camera 2.unity
-    guid: de11d9aa1536c9345aea9d48d92e3d45
-  - enabled: 1
-    path: Assets/Scenes/Camera 3.unity
-    guid: cf68fb823eb925c498494bb5947b51a5
-  - enabled: 1
-    path: Assets/Scenes/Camera 4.unity
-    guid: 49aba63116d97a0469e019e7743572e6
-  - enabled: 1
-    path: Assets/Scenes/LPF_01.unity
+    path: Assets/Scenes/LPF 01.unity
     guid: fc1be4102133578448803c86f411c7c0
   - enabled: 1
-    path: Assets/Scenes/LPF_02.unity
+    path: Assets/Scenes/LPF 02.unity
     guid: 6483386bd83e034459904a72a77f6449
   - enabled: 1
-    path: Assets/Scenes/LPF_03.unity
+    path: Assets/Scenes/LPF 03.unity
     guid: 597e25e37652fe741a588922507ec265
   - enabled: 1
-    path: Assets/Scenes/LPF_04.unity
+    path: Assets/Scenes/LPF 04.unity
     guid: 2dc91031887b940478019ba2a03d24f1
   - enabled: 1
-    path: Assets/Scenes/LPF_05.unity
+    path: Assets/Scenes/LPF 05.unity
     guid: 1b8836924050b5043991cce9dccda8cc
   - enabled: 1
-    path: Assets/Scenes/LPF_06.unity
+    path: Assets/Scenes/LPF 06.unity
     guid: 535d6deb983561d49a5cfbbd1932945e
   - enabled: 1
-    path: Assets/Scenes/LPF_07.unity
+    path: Assets/Scenes/LPF 07.unity
     guid: 54c300fc1ed8d0740a4a74c362ce3663
   - enabled: 1
-    path: Assets/Scenes/LPF_08.unity
+    path: Assets/Scenes/LPF 08.unity
     guid: 676fb9f2e5a719743acb476e1b38c8d4
   - enabled: 1
-    path: Assets/Scenes/LPF_09.unity
+    path: Assets/Scenes/LPF 09.unity
     guid: e01e7a42f89f57b49a5f7f25784b6b7b
   - enabled: 1
-    path: Assets/Scenes/LPF_10.unity
+    path: Assets/Scenes/LPF 10.unity
     guid: 70f8928db5a4e6c40b2f7d0a4d64bbbf
+  - enabled: 1
+    path: Assets/Scenes/LPF 11.unity
+    guid: 3fbe3da51058b6242bed61f893cb8b3f
+  - enabled: 1
+    path: Assets/Scenes/LPF 12.unity
+    guid: d0020af49b3d4cb4dabd8a8777d57f36
+  - enabled: 1
+    path: Assets/Scenes/LPF 13.unity
+    guid: 4da0cc206c7e2de4099e2d48bd97677a
+  - enabled: 1
+    path: Assets/Scenes/LPF 14.unity
+    guid: 47dd22044b7ad41489deefd3951e856e
+  - enabled: 1
+    path: Assets/Scenes/LPF 15.unity
+    guid: 90c101db8d78a614398148f92aab8c8d
+  - enabled: 1
+    path: Assets/Scenes/LPF 16.unity
+    guid: 3cf2a11ca3fd13347a7e3506bb9154b1
+  - enabled: 1
+    path: Assets/Scenes/LPF 17.unity
+    guid: df5d31ef2d25dae4298e17c926d9c316
+  - enabled: 1
+    path: Assets/Scenes/LPF 18.unity
+    guid: ad91fd3c432491a41be6e0e3235f0dbb
+  - enabled: 1
+    path: Assets/Scenes/LPF 19.unity
+    guid: 00000dd5d95ce3649950a0b06d40a9ba
+  - enabled: 1
+    path: Assets/Scenes/LPF 20.unity
+    guid: 17b409b0d2f43d644b19af07bfe683ef
   m_configObjects: {}
