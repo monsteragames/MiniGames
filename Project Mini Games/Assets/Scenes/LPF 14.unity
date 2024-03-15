@@ -649,18 +649,6 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 728704234}
-    - target: {fileID: 2124215040321717090, guid: c2f52130fa5c4724f8d2fd5208588b44, type: 3}
-      propertyPath: FadeSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124215040321717090, guid: c2f52130fa5c4724f8d2fd5208588b44, type: 3}
-      propertyPath: FadedAlpha
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124215040321717090, guid: c2f52130fa5c4724f8d2fd5208588b44, type: 3}
-      propertyPath: TargetPositionOffset.y
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 3087194219776665714, guid: c2f52130fa5c4724f8d2fd5208588b44, type: 3}
       propertyPath: joystick
       value: 
@@ -724,10 +712,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4046626145038327908, guid: c2f52130fa5c4724f8d2fd5208588b44, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 728704236}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2f52130fa5c4724f8d2fd5208588b44, type: 3}
 --- !u!95 &728704233 stripped
 Animator:
@@ -739,33 +724,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7068246023882620587, guid: c2f52130fa5c4724f8d2fd5208588b44, type: 3}
   m_PrefabInstance: {fileID: 728704232}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &728704235 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4046626145038327908, guid: c2f52130fa5c4724f8d2fd5208588b44, type: 3}
-  m_PrefabInstance: {fileID: 728704232}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &728704236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728704235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba8b0b527122e1544a74dcd52656b8cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  Target: {fileID: 728704234}
-  Camera: {fileID: 786384794}
-  FadedAlpha: 0.33
-  RetainShadows: 1
-  TargetPositionOffset: {x: 0, y: 1, z: 0}
-  FadeSpeed: 1
-  ObjectsBlockingView: []
 --- !u!4 &775290823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3436161231884159434, guid: 2b1eac3df5dff0942ba4fa0c19060607, type: 3}
