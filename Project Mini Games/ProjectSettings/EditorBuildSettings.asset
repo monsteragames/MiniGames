@@ -20,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LPF Water 4.unity
     guid: 83c6db9b2e0e18941b710f85841774f4
-  - enabled: 1
-    path: Assets/Scenes/LPF Water 0.unity
-    guid: 420ee238409e8a343bb132a420ff76bf
   m_configObjects: {}
