@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196366863223544329}
   - component: {fileID: 7443542083965660138}
-  - component: {fileID: 942491466399478477}
+  - component: {fileID: 3560380224181060472}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -51,7 +51,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -95,7 +95,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &942491466399478477
+--- !u!114 &3560380224181060472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 17532ddfdf40d944887948d5861085ba, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3637f349319bf8a488f2ca7029bb9cf6, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -210,44 +210,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3751343038391511751, guid: d8527f95a6f26404d8190897036ccae5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 45801950}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8527f95a6f26404d8190897036ccae5, type: 3}
 --- !u!4 &45801948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 196366863223544329, guid: d8527f95a6f26404d8190897036ccae5, type: 3}
   m_PrefabInstance: {fileID: 45801947}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &45801949 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3751343038391511751, guid: d8527f95a6f26404d8190897036ccae5, type: 3}
-  m_PrefabInstance: {fileID: 45801947}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &45801950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45801949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
 --- !u!1 &244041826
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 270220645}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 3.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -423,6 +392,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2ee447e947a2b0b45be7bce47ee81e3e, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ee447e947a2b0b45be7bce47ee81e3e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -629,6 +602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenLilyPads-mockup002 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30c425ef1b635de4f90db542c0b7ebe1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -813,6 +790,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 30c425ef1b635de4f90db542c0b7ebe1, type: 3}
       propertyPath: m_Name
       value: GreenLilyPads-mockup002 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30c425ef1b635de4f90db542c0b7ebe1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1026,7 +1007,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1311810685
 Transform:
@@ -1062,6 +1043,10 @@ PrefabInstance:
     - target: {fileID: 2603901445113940356, guid: 2b1eac3df5dff0942ba4fa0c19060607, type: 3}
       propertyPath: m_Name
       value: Objective
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603901445113940356, guid: 2b1eac3df5dff0942ba4fa0c19060607, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3436161231884159434, guid: 2b1eac3df5dff0942ba4fa0c19060607, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1274,6 +1259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenLilyPads-mockup002
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30c425ef1b635de4f90db542c0b7ebe1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1362,9 +1351,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 258712044763056916, guid: bd695ec05b960ed4cb569a88472f5013, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551296977871559753, guid: bd695ec05b960ed4cb569a88472f5013, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6779190181614417587, guid: bd695ec05b960ed4cb569a88472f5013, type: 3}
       propertyPath: m_Name
       value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779190181614417587, guid: bd695ec05b960ed4cb569a88472f5013, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7918598802290109297, guid: bd695ec05b960ed4cb569a88472f5013, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1372,7 +1373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918598802290109297, guid: bd695ec05b960ed4cb569a88472f5013, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7918598802290109297, guid: bd695ec05b960ed4cb569a88472f5013, type: 3}
       propertyPath: m_LocalPosition.z
